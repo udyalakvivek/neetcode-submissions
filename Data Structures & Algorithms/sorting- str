@@ -1,0 +1,18 @@
+s1 = "listen"
+s2 = "silent"
+
+print(sorted(s2))
+
+def sort_str(s):
+    char = list(s)
+    n = len(char)
+    for i in range(n):
+        # Yahan k aur k + 1 ko compare karna hai
+        for k in range(0,n-i-1):
+            #Agar pehla character doosre se bada hai, toh unki jagah badal do
+            if char[i] > char[k+1]:
+                char[i],char[k+1] = char[k+1],char[i]
+    return "".join(char)
+res = sort_str(s2)
+if res:
+    print("result", res)
